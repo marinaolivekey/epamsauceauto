@@ -34,10 +34,17 @@ public class DataProviderClass {
         };
     }
 
-    @DataProvider(name = "test")
-    public static Object[][] test() {
+    @DataProvider(name = "testUserNameReq")
+    public static Object[][] testUserNameReq() {
         return new Object[][]{
-                {"testuser", "testpass"},
+                {"", "testpassword"},
+        };
+    }
+
+    @DataProvider(name = "testPasswReq")
+    public static Object[][] testPasswReq() {
+        return new Object[][]{
+                {"testuser", ""},
         };
     }
 }

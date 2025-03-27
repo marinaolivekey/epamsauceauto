@@ -11,7 +11,7 @@ public class LoginTest extends CommonConditions {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginTest.class);
 
-    @Test(dataProvider = "test", dataProviderClass = DataProviderClass.class)
+    @Test(dataProvider = "testUserNameReq", dataProviderClass = DataProviderClass.class)
     public void testUsernameRequired(String username, String password) {
         logger.info("Starting test: testUsernameRequired for user: {}", username);
 
@@ -30,7 +30,7 @@ public class LoginTest extends CommonConditions {
         logger.info("Test completed for user: {}", username);
     }
 
-    @Test(dataProvider = "test", dataProviderClass = DataProviderClass.class)
+    @Test(dataProvider = "testPasswReq", dataProviderClass = DataProviderClass.class)
     public void shouldShowErrorPasswordRequired(String username, String password) {
         logger.info("Starting test: testPasswordRequired for user: {}", username);
 
