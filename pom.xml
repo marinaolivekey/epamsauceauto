@@ -52,6 +52,22 @@
         <artifactId>assertj-core</artifactId>
         <version>3.24.2</version>
     </dependency>
+    <!-- Cucumber dependencies -->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>7.15.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-testng</artifactId>
+        <version>7.15.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-core</artifactId>
+        <version>7.15.0</version>
+    </dependency>
 </dependencies>
 
 <build>
@@ -62,11 +78,14 @@
             <version>3.2.5</version>
             <configuration>
                 <parallel>methods</parallel>
-                <threadCount>1</threadCount>
+                <threadCount>2</threadCount>
                 <systemPropertyVariables>
                     <browser>chrome</browser>
                     <environment>dev</environment>
                 </systemPropertyVariables>
+                <suiteXmlFiles>
+                    <suiteXmlFile>testng.xml</suiteXmlFile> <!-- Optional, if using a TestNG XML -->
+                </suiteXmlFiles>
             </configuration>
         </plugin>
         <plugin>
